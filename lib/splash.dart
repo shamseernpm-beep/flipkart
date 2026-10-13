@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Login()),
@@ -25,6 +25,15 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(backgroundColor: Colors.blue);
+    return Scaffold(
+      backgroundColor: Color(0xFFFFE60D),
+      body: Center(
+        child: SizedBox(
+          height: 400,
+          width: 700,
+          child: Image.asset("assets/images/flip.jpg"),
+        ),
+      ),
+    );
   }
 }
