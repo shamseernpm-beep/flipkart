@@ -15,8 +15,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Login()),
@@ -26,6 +25,6 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.blue);
+    return const Scaffold(backgroundColor: Colors.blue);
   }
 }
