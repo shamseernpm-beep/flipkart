@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
+import 'splash.dart';
+
 void main() {
-  runApp(const Flipkart());
+  runApp(Flipkart());
 }
 
 class Flipkart extends StatelessWidget {
-  const new({super.key});
+  const Flipkart({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.white),
-      title: "FLIPKART",
-    );
+    return MaterialApp(home: Splash(), debugShowCheckedModeBanner: false);
   }
 }
