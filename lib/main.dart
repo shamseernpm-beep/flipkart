@@ -9,6 +9,9 @@ class Flipkart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData(primaryColor: Colors.white));
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.white),
+      title: "FLIPKART",
+    );
   }
 }
