@@ -95,7 +95,7 @@ class _LoginState extends State<Login> {
                 Container(
                   width: double.infinity,
                   color: Colors.blue,
-                  child: TextButton(
+                  child: ElevatedButton(
                     onPressed: () {
                       String username = usernameController.text;
                       String password = passwordController.text;
@@ -112,7 +112,11 @@ class _LoginState extends State<Login> {
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child: Text("ok"),
+
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blue,
+                                  ),
+                                  child: Text("OK"),
                                 ),
                               ],
                             );
@@ -123,8 +127,36 @@ class _LoginState extends State<Login> {
                           context,
                           MaterialPageRoute(builder: (context) => Home()),
                         );
+                      } else {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              icon: Icon(Icons.error),
+                              title: Text("incorrect user name or password"),
+                              content: Text(
+                                "please check your user name and password",
+                              ),
+                              actions: [
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blue,
+                                  ),
+                                  child: Text("OK"),
+                                ),
+                              ],
+                            );
+                          },
+                        );
                       }
                     },
+
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                    ),
                     child: Text(
                       "Login",
                       style: TextStyle(fontWeight: FontWeight(600)),
