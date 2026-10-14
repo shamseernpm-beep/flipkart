@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                     child: TextField(
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.password),
-                        hintText: "ENTER YOUR PASSWORD",
+                        hintText: "enter your password",
                         labelText: "password",
                         border: OutlineInputBorder(),
                       ),
