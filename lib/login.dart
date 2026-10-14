@@ -13,22 +13,28 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Container(
-          child: Row(
-            children: [
-              Container(
-                color: Color(0xFF1F74BA),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 700,
-                      width: 500,
-                      child: Image.asset("assets/images/org.jpg"),
-                    ),
-                  ],
+        child: Expanded(
+          child: Container(
+            child: Row(
+              children: [
+                Container(
+                  color: Color(0xFF1F74BA),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 800,
+                        width: 500,
+                        child: Image.asset("assets/images/org.jpg"),
+                      ),
+                      Text("hello world"),
+                      Text("hello world"),
+                      Text("hello world"),
+                      Text("hello world"),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
