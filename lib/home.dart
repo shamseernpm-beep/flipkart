@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -147,7 +147,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -172,7 +172,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -197,7 +197,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -217,12 +217,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          "Books",
+                          "BOOKS",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -242,12 +242,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          "Watch",
+                          "Watches",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -272,7 +272,7 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 6),
                     Column(
                       children: [
                         Container(
@@ -292,7 +292,32 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          "Cameres",
+                          "Camera",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                       SizedBox(width: 6),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.camera,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Camera",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ],
