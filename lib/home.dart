@@ -64,21 +64,194 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Column(
-          children: [
-            SizedBox(
-              width: double.infinity,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Column(
+            children: [
+              Image.asset("assets/images/big.jpeg", width: double.infinity),
+              SizedBox(height: 20),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  spacing: 20,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
 
-              child: Image.asset("assets/images/card.jpg"),
-            ),
-
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(children: [Container()]),
-            ),
-          ],
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.phone_android,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Mobiles",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.laptop,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "laptops",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.tv, size: 50, color: Colors.blue),
+                          ),
+                        ),
+                        Text(
+                          "TV",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.checkroom,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Fashion",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.chair,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Furniture",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.menu_book,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Books",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.watch,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Watch",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
