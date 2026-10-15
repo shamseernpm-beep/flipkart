@@ -64,6 +64,23 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          children: [
+            SizedBox(
+              width: double.infinity,
+
+              child: Image.asset("assets/images/card.jpg"),
+            ),
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(children: [Container()]),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
