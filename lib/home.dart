@@ -247,6 +247,31 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
+                    SizedBox(width: 5),
+                    Column(
+                      children: [
+                        Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade100,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.toys,
+                              size: 50,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Toys",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
