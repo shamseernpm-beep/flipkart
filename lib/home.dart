@@ -297,31 +297,6 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                       SizedBox(width: 6),
-                    Column(
-                      children: [
-                        Container(
-                          height: 80,
-                          width: 80,
-                          decoration: BoxDecoration(
-                            color: Colors.blue.shade100,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.camera,
-                              size: 50,
-                              color: Colors.blue,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          "Camera",
-                          style: TextStyle(fontSize: 20, color: Colors.black),
-                        ),
-                      ],
-                    ),
                   ],
                 ),
               ),
