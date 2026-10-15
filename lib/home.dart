@@ -49,9 +49,10 @@ class _HomeState extends State<Home> {
                   child: SizedBox(
                     child: TextField(
                       decoration: InputDecoration(
+                        border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.search),
                         hintText: "search for products, Brand and More",
-
+                        suffixIcon: Icon(Icons.camera_alt),
                         filled: true,
                         fillColor: Colors.white,
                       ),
