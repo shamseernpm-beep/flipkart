@@ -267,7 +267,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Text(
-                          "Toys",
+                          "TOYS",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ],
