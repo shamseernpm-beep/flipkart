@@ -285,14 +285,14 @@ class _HomeState extends State<Home> {
                           child: IconButton(
                             onPressed: () {},
                             icon: Icon(
-                              Icons.toys,
+                              Icons.camera_alt,
                               size: 50,
                               color: Colors.blue,
                             ),
                           ),
                         ),
                         Text(
-                          "Toys",
+                          "Cameres",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ],
