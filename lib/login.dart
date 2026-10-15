@@ -123,7 +123,7 @@ class _LoginState extends State<Login> {
                           },
                         );
                       } else if (username == "riswan" && password == "123") {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => Home()),
                         );
