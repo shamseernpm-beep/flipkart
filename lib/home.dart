@@ -405,7 +405,7 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           Text(
-                            "₹1,499",
+                            "₹999",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight(700),
