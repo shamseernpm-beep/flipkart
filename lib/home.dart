@@ -300,43 +300,152 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              Card(
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        "assets/images/lap.png",
-                        height: 100,
-                        width: 100,
+              GridView.count(
+                crossAxisCount: 2,
+                shrinkWrap: true,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20,
+                childAspectRatio: 0.75,
+                children: [
+                  Card(
+                    elevation: 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Image.asset("assets/images/phone.png"),
+                          ),
+                          Text(
+                            "LAPTOP",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          Text(
+                            "₹1,499",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text("Buy Now"),
+                          ),
+                        ],
                       ),
-                      Text(
-                        "LAPTOP",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight(700),
-                        ),
-                      ),
-                      Text(
-                        "₹1,499",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight(700),
-                        ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
-                          foregroundColor: Colors.white,
-                        ),
-                        child: Text("Buy Now"),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                  Card(
+                    elevation: 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(child: Image.asset("assets/images/lap.png")),
+                          Text(
+                            "LAPTOP",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          Text(
+                            "₹1,499",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text("Buy Now"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Image.asset("assets/images/phone.png"),
+                          ),
+                          Text(
+                            "LAPTOP",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          Text(
+                            "₹1,499",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text("Buy Now"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(child: Image.asset("assets/images/lap.png")),
+                          Text(
+                            "LAPTOP",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          Text(
+                            "₹1,499",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text("Buy Now"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
