@@ -335,7 +335,7 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           Text(
-                            "₹60,000",
+                            "₹59,999",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight(700),
@@ -369,7 +369,7 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           Text(
-                            "₹30,000",
+                            "₹29,999",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight(700),
@@ -470,14 +470,14 @@ class _HomeState extends State<Home> {
                             child: Image.asset("assets/images/lipstick.png"),
                           ),
                           Text(
-                            "Rolex",
+                            "Lipstick",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight(700),
                             ),
                           ),
                           Text(
-                            "₹1,499",
+                            "₹499",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight(700),
