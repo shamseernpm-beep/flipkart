@@ -300,6 +300,46 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
+              Card(
+                elevation: 4,
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        "assets/images/lap.png",
+                        height: 100,
+                        width: 100,
+                      ),
+                      Text(
+                        "LAPTOP",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight(700),
+                        ),
+                      ),
+                      Text(
+                        "₹1,499",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight(700),
+                        ),
+                      ),
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white,
+                          ),
+                          child: Text("Buy Now"),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
