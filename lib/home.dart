@@ -300,24 +300,35 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
+              SizedBox(height: 20),
+              Text(
+                "Products",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight(500),
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 15),
               GridView.count(
                 crossAxisCount: 2,
                 shrinkWrap: true,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
-                childAspectRatio: 0.75,
+                childAspectRatio: 0.90,
                 children: [
                   Card(
                     elevation: 4,
                     child: Padding(
                       padding: EdgeInsets.all(10),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
                             child: Image.asset("assets/images/phone.png"),
                           ),
                           Text(
-                            "LAPTOP",
+                            "Mobile",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight(700),
@@ -381,12 +392,13 @@ class _HomeState extends State<Home> {
                     child: Padding(
                       padding: EdgeInsets.all(10),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
-                            child: Image.asset("assets/images/phone.png"),
+                            child: Image.asset("assets/images/hair.png"),
                           ),
                           Text(
-                            "LAPTOP",
+                            "Head Phone",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight(700),
@@ -418,9 +430,83 @@ class _HomeState extends State<Home> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Expanded(child: Image.asset("assets/images/lap.png")),
+                          Expanded(
+                            child: Image.asset("assets/images/watch.png"),
+                          ),
                           Text(
-                            "LAPTOP",
+                            "Rolex",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          Text(
+                            "₹1,499",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text("Buy Now"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Image.asset("assets/images/watch.png"),
+                          ),
+                          Text(
+                            "Rolex",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          Text(
+                            "₹1,499",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: Text("Buy Now"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Image.asset("assets/images/watch.png"),
+                          ),
+                          Text(
+                            "Rolex",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight(700),
