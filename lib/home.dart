@@ -467,7 +467,7 @@ class _HomeState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
-                            child: Image.asset("assets/images/watch.png"),
+                            child: Image.asset("assets/images/lipstick.png"),
                           ),
                           Text(
                             "Rolex",
@@ -503,7 +503,7 @@ class _HomeState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
-                            child: Image.asset("assets/images/watch.png"),
+                            child: Image.asset("assets/images/camera.png"),
                           ),
                           Text(
                             "Rolex",
