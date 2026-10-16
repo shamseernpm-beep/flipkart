@@ -326,15 +326,13 @@ class _HomeState extends State<Home> {
                           fontWeight: FontWeight(700),
                         ),
                       ),
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            foregroundColor: Colors.white,
-                          ),
-                          child: Text("Buy Now"),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          foregroundColor: Colors.white,
                         ),
+                        child: Text("Buy Now"),
                       ),
                     ],
                   ),
