@@ -328,14 +328,14 @@ class _HomeState extends State<Home> {
                             child: Image.asset("assets/images/phone.png"),
                           ),
                           Text(
-                            "Mobile",
+                            "I phone 13 pro",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight(700),
                             ),
                           ),
                           Text(
-                            "₹1,499",
+                            "₹60,000",
                             style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight(700),
