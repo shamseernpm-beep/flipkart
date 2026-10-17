@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'bottombar.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -8,8 +10,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -488,24 +488,6 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-
-        onTap: (index) {
-          setState(() {
-            selectedIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "bag"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "PROFILE"),
-        ],
       ),
     );
   }
