@@ -490,6 +490,8 @@ class _HomeState extends State<Home> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
