@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedIdex = 0;
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -490,10 +490,16 @@ class _HomeState extends State<Home> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIdex,
+        currentIndex: selectedIndex,
 
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
+
+        onTap: (index) {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
