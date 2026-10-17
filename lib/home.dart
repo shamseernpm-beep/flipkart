@@ -491,6 +491,7 @@ class _HomeState extends State<Home> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "bag"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "PROFILE"),
         ],
       ),
