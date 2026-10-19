@@ -41,7 +41,7 @@ class _BagState extends State<Bag> {
                     ),
                   ),
                   Column(
-                    // mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
 
                     children: [
                       Text(
@@ -50,6 +50,34 @@ class _BagState extends State<Bag> {
                       ),
                       SizedBox(height: 2),
                       Text("Silver and green   ⭐ 5.5"),
+                      SizedBox(height: 2),
+                      Text("₹"),
+                      SizedBox(height: 5),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(
+                              horizontal: 30,
+                              vertical: 7,
+                            ),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black),
+                            ),
+                            child: Text("- 1 +"),
+                          ),
+                          OutlinedButton(
+                            onPressed: () {},
+                            style: OutlinedButton.styleFrom(
+                              padding: EdgeInsets.symmetric(horizontal: 13),
+                              minimumSize: Size(0, 19),
+                            ),
+                            child: Text(
+                              "SAVE LATER",
+                              style: TextStyle(fontWeight: FontWeight(700)),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],
