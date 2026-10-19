@@ -11,7 +11,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text("profile screen"))),
+      appBar: AppBar(
+        title: Text("profile", style: TextStyle(fontWeight: FontWeight(700))),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            children: [
+              SizedBox(height: 40),
+              Center(
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.black,
+                  child: CircleAvatar(
+                    radius: 38,
+
+                    child: Image.asset(
+                      "assets/images/am.jpeg",
+                      height: 60,
+                      width: 60,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                color: const Color.fromARGB(255, 229, 229, 229),
+                child: ListTile(
+                  leading: Icon(Icons.person),
+                  title: Text("My Account"),
+                  trailing: Icon(Icons.arrow_forward_ios, size: 20),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
