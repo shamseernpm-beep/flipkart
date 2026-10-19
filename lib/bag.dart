@@ -41,30 +41,62 @@ class _BagState extends State<Bag> {
                     ),
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-
                     children: [
-                      Text(
-                        "Rolex Watchs",
-                        style: TextStyle(fontWeight: FontWeight(700)),
-                      ),
-                      SizedBox(height: 2),
-                      Text("Silver and green   ⭐ 5.5"),
-                      SizedBox(height: 2),
-                      Text("₹"),
-                      SizedBox(height: 5),
-                      Row(
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+
                         children: [
-                          Container(
-                            margin: EdgeInsets.symmetric(
-                              horizontal: 30,
-                              vertical: 7,
-                            ),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black),
-                            ),
-                            child: Text("- 1 +"),
+                          Text(
+                            "Rolex Watchs",
+                            style: TextStyle(fontWeight: FontWeight(700)),
                           ),
+                          SizedBox(height: 2),
+                          Text("Silver and green   ⭐ 5.5"),
+                          SizedBox(height: 2),
+                          Text("₹10,0000"),
+                          SizedBox(height: 5),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: 15,
+                                    vertical: 1,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.black),
+                                  ),
+                                  child: Text("- 1 +"),
+                                ),
+                                SizedBox(width: 50),
+                                OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 13,
+                                    ),
+                                    minimumSize: Size(0, 19),
+                                  ),
+                                  child: Text(
+                                    "SAVE LATER",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight(700),
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SizedBox(width: 80),
                           OutlinedButton(
                             onPressed: () {},
                             style: OutlinedButton.styleFrom(
@@ -72,8 +104,11 @@ class _BagState extends State<Bag> {
                               minimumSize: Size(0, 19),
                             ),
                             child: Text(
-                              "SAVE LATER",
-                              style: TextStyle(fontWeight: FontWeight(700)),
+                              "DELETE",
+                              style: TextStyle(
+                                fontWeight: FontWeight(700),
+                                color: Colors.red,
+                              ),
                             ),
                           ),
                         ],
