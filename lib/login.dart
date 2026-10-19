@@ -1,4 +1,4 @@
-import 'bottombar.dart';
+import 'package:flipkart_ui/bottombar.dart';
 
 import 'package:flutter/material.dart';
 

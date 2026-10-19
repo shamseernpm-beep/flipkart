@@ -12,29 +12,32 @@ class Bottombar extends StatefulWidget {
 }
 
 class _BottombarState extends State<Bottombar> {
-  int selectedIndex = 0;
+  int currentIndex = 0;
   List<Widget> pages = [Home(), SearchScreen(), Bag(), ProfileScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(index: selectedIndex, children: pages),
+      body: IndexedStack(index: currentIndex, children: pages),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
-        currentIndex: selectedIndex,
-
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
 
         onTap: (index) {
           setState(() {
-            selectedIndex = index;
+            currentIndex = index;
           });
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "bag"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "PROFILE"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "SEARCH"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag_outlined),
+            activeIcon: Icon(Icons.shopping_bag),
+            label: "BAG",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
         ],
       ),
     );
