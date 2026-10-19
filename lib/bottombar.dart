@@ -35,7 +35,7 @@ class _BottombarState extends State<Bottombar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag_outlined),
             activeIcon: Icon(Icons.shopping_bag),
-            label: "BAG",
+            label: "Cart",
           ),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
         ],

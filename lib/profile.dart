@@ -19,7 +19,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           padding: const EdgeInsets.all(12),
           child: Column(
             children: [
-              SizedBox(height: 40),
               Center(
                 child: CircleAvatar(
                   radius: 40,
@@ -39,6 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
+              SizedBox(height: 40),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 color: const Color.fromARGB(255, 229, 229, 229),
@@ -48,6 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   trailing: Icon(Icons.arrow_forward_ios, size: 20),
                 ),
               ),
+              SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 color: const Color.fromARGB(255, 229, 229, 229),
@@ -57,6 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   trailing: Icon(Icons.arrow_forward_ios, size: 20),
                 ),
               ),
+              SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 color: const Color.fromARGB(255, 229, 229, 229),
@@ -66,6 +68,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   trailing: Icon(Icons.arrow_forward_ios),
                 ),
               ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                color: const Color.fromARGB(255, 229, 229, 229),
+                child: ListTile(
+                  leading: Icon(Icons.notification_add),
+                  title: Text("Notifications"),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                color: const Color.fromARGB(255, 229, 229, 229),
+                child: ListTile(
+                  leading: Icon(Icons.location_on_outlined),
+                  title: Text("Shipping Address"),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                color: const Color.fromARGB(255, 229, 229, 229),
+                child: ListTile(
+                  leading: Icon(Icons.headset_mic),
+                  title: Text("Contact us"),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                color: const Color.fromARGB(255, 229, 229, 229),
+                child: ListTile(
+                  leading: Icon(Icons.logout),
+                  title: Text("Logout"),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                ),
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ),
