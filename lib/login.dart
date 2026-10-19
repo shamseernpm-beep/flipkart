@@ -1,4 +1,4 @@
-import 'home.dart';
+import 'bottombar.dart';
 
 import 'package:flutter/material.dart';
 
@@ -126,7 +126,9 @@ class _LoginState extends State<Login> {
                         } else if (username == "riswan" && password == "123") {
                           Navigator.pushReplacement(
                             context,
-                            MaterialPageRoute(builder: (context) => Home()),
+                            MaterialPageRoute(
+                              builder: (context) => Bottombar(),
+                            ),
                           );
                         } else {
                           showDialog(
