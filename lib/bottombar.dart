@@ -5,7 +5,7 @@ import 'package:flipkart_ui/search.dart';
 import 'package:flutter/material.dart';
 
 class Bottombar extends StatefulWidget {
-  const new({super.key});
+  const Bottombar({super.key});
 
   @override
   State<Bottombar> createState() => _BottombarState();

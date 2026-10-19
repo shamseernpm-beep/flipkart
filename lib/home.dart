@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'bottombar.dart';
-
 class Home extends StatefulWidget {
   const Home({super.key});
 
