@@ -61,28 +61,84 @@ class _SearchScreenState extends State<SearchScreen> {
                         ),
                       ],
                     ),
-                    SizedBox(width: 30),
+
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 70),
                         Text(
                           "Delivery expencted by october 29",
                           style: TextStyle(
                             fontWeight: FontWeight(700),
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
                         Text("Rolex og color silver and green..."),
                       ],
                     ),
-                    SizedBox(width: 100),
+                    SizedBox(width: 20),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [Icon(Icons.arrow_forward_ios)],
                     ),
                   ],
                 ),
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 228, 227, 227),
+                    width: 2,
+                  ),
+                ),
+                width: double.infinity,
+                height: 200,
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/phone.png",
+                          height: 150,
+                          width: 150,
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Cancelled Today,Nov 2",
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight(700),
+                            fontSize: 15,
+                          ),
+                        ),
+                        Text("I phone 13 pro gold and blue..."),
+                      ],
+                    ),
+                    SizedBox(width: 20),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Icon(Icons.arrow_forward_ios)],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 219, 219, 219),
+                    width: 2,
+                  ),
+                ),
+                child: Center(child: Text("No More Orders")),
               ),
             ],
           ),
