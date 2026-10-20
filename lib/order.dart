@@ -10,6 +10,12 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("search")));
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 80,
+        backgroundColor: Colors.blue,
+        title: Center(child: Text("Orders")),
+      ),
+    );
   }
 }

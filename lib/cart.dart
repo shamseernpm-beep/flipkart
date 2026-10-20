@@ -100,7 +100,7 @@ class _BagState extends State<Bag> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 30),
                               ],
                             ),
                             Row(
@@ -205,7 +205,7 @@ class _BagState extends State<Bag> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 30),
                               ],
                             ),
                             Row(

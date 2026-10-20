@@ -1,7 +1,7 @@
-import 'package:flipkart_ui/bag.dart';
+import 'package:flipkart_ui/cart.dart';
 import 'package:flipkart_ui/home.dart';
 import 'package:flipkart_ui/profile.dart';
-import 'package:flipkart_ui/search.dart';
+import 'package:flipkart_ui/order.dart';
 import 'package:flutter/material.dart';
 
 class Bottombar extends StatefulWidget {
@@ -31,7 +31,10 @@ class _BottombarState extends State<Bottombar> {
         },
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "SEARCH"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.inventory_2_outlined),
+            label: "Order",
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag_outlined),
             activeIcon: Icon(Icons.shopping_bag),
