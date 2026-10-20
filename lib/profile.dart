@@ -12,7 +12,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("profile", style: TextStyle(fontWeight: FontWeight(700))),
+        backgroundColor: Colors.blue,
+        toolbarHeight: 80,
+        title: Center(
+          child: Text("Account", style: TextStyle(fontWeight: FontWeight(700))),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
