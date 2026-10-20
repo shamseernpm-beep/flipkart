@@ -328,30 +328,27 @@ class _BagState extends State<Bag> {
                             children: [
                               OutlinedButton.icon(
                                 onPressed: () {},
-                                icon: Icon(
-                                  Icons.credit_card,
-                                  color: Colors.blue,
-                                ),
+                                icon: Icon(Icons.credit_card),
 
-                                label: Text(
-                                  "Card",
-                                  style: TextStyle(color: Colors.blue),
+                                label: Text("Card"),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: Colors.blue,
                                 ),
                               ),
 
                               OutlinedButton.icon(
                                 onPressed: () {},
-                                label: Text(
-                                  "UPI",
-                                  style: TextStyle(color: Colors.blue),
-                                ),
+                                label: Text("UPI"),
                                 icon: Icon(
                                   Icons.account_balance_wallet_outlined,
-                                  color: Colors.blue,
+                                ),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: Colors.blue,
                                 ),
                               ),
                               OutlinedButton.icon(
                                 onPressed: () {},
+
                                 label: Text(
                                   "COD",
                                   style: TextStyle(color: Colors.blue),
@@ -360,6 +357,7 @@ class _BagState extends State<Bag> {
                                   Icons.email_outlined,
                                   color: Colors.blue,
                                 ),
+                                style: OutlinedButton.styleFrom(),
                               ),
                             ],
                           ),
