@@ -243,7 +243,7 @@ class _BagState extends State<Bag> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    height: 200,
+                    height: 300,
                     width: double.infinity,
                     color: Colors.white,
                     child: Padding(
@@ -256,24 +256,52 @@ class _BagState extends State<Bag> {
                             style: TextStyle(
                               fontWeight: FontWeight(700),
                               fontSize: 20,
+                              color: Colors.black,
                             ),
                           ),
-                          SizedBox(height: 8),
+                          SizedBox(height: 25),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("price (2 items)"),
-                              Text("₹15,9999"),
+                              Text(
+                                "price (2 items)",
+                                style: TextStyle(
+                                  fontWeight: FontWeight(600),
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                "₹15,9999",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight(700),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Discount",
+                                style: TextStyle(
+                                  fontWeight: FontWeight(700),
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                "₹2000",
+                                style: TextStyle(
+                                  fontWeight: FontWeight(700),
+                                  color: Colors.black,
+                                ),
+                              ),
                             ],
                           ),
                           SizedBox(height: 5),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [Text("Discount"), Text("₹2000")],
-                          ),
-                          SizedBox(height: 5),
                           Divider(height: 2),
-                          SizedBox(height: 8),
+                          SizedBox(height: 24),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -281,34 +309,57 @@ class _BagState extends State<Bag> {
                                 "Totel Amount",
                                 style: TextStyle(
                                   fontWeight: FontWeight(700),
-                                  fontSize: 15,
+                                  fontSize: 18,
                                 ),
                               ),
-                              Text("₹15,7999"),
+                              Text(
+                                "₹15,7999",
+                                style: TextStyle(
+                                  fontWeight: FontWeight(700),
+                                  color: Colors.black,
+                                ),
+                              ),
                             ],
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 30),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             spacing: 10,
                             children: [
                               OutlinedButton.icon(
                                 onPressed: () {},
-                                icon: Icon(Icons.credit_card),
-                                label: Text("Card"),
+                                icon: Icon(
+                                  Icons.credit_card,
+                                  color: Colors.blue,
+                                ),
+
+                                label: Text(
+                                  "Card",
+                                  style: TextStyle(color: Colors.blue),
+                                ),
                               ),
 
                               OutlinedButton.icon(
                                 onPressed: () {},
-                                label: Text("UPI"),
+                                label: Text(
+                                  "UPI",
+                                  style: TextStyle(color: Colors.blue),
+                                ),
                                 icon: Icon(
                                   Icons.account_balance_wallet_outlined,
+                                  color: Colors.blue,
                                 ),
                               ),
                               OutlinedButton.icon(
                                 onPressed: () {},
-                                label: Text("COD"),
-                                icon: Icon(Icons.email_outlined),
+                                label: Text(
+                                  "COD",
+                                  style: TextStyle(color: Colors.blue),
+                                ),
+                                icon: Icon(
+                                  Icons.email_outlined,
+                                  color: Colors.blue,
+                                ),
                               ),
                             ],
                           ),
