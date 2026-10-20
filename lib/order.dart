@@ -14,7 +14,79 @@ class _SearchScreenState extends State<SearchScreen> {
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.blue,
-        title: Center(child: Text("Orders")),
+        title: Center(
+          child: Text(
+            "Orders",
+            style: TextStyle(fontWeight: FontWeight(700), color: Colors.black),
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.search),
+                    hintText: "Search your order here",
+                    suffixIcon: Icon(Icons.filter_center_focus_outlined),
+                    suffixText: "Filter",
+                    contentPadding: EdgeInsets.symmetric(vertical: 8),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 231, 230, 230),
+                    width: 2,
+                  ),
+                ),
+                width: double.infinity,
+                height: 200,
+
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/watch.png",
+                          height: 150,
+                          width: 150,
+                        ),
+                      ],
+                    ),
+                    SizedBox(width: 30),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 70),
+                        Text(
+                          "Delivery expencted by october 29",
+                          style: TextStyle(
+                            fontWeight: FontWeight(700),
+                            fontSize: 18,
+                          ),
+                        ),
+                        Text("Rolex og color silver and green..."),
+                      ],
+                    ),
+                    SizedBox(width: 100),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Icon(Icons.arrow_forward_ios)],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
