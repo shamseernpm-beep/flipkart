@@ -357,7 +357,9 @@ class _BagState extends State<Bag> {
                                   Icons.email_outlined,
                                   color: Colors.blue,
                                 ),
-                                style: OutlinedButton.styleFrom(),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: Colors.blue,
+                                ),
                               ),
                             ],
                           ),
