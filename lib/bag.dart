@@ -12,6 +12,7 @@ class _BagState extends State<Bag> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 80,
         backgroundColor: Colors.blue,
 
         title: Center(
@@ -22,6 +23,7 @@ class _BagState extends State<Bag> {
         ),
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Padding(
           padding: const EdgeInsets.all(12),
           child: Column(
@@ -310,9 +312,30 @@ class _BagState extends State<Bag> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 5),
                         ],
                       ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              SizedBox(
+                width: double.infinity,
+                height: 40,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.horizontal(),
+                    ),
+                  ),
+                  child: Text(
+                    "Pay ₹15,7999",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight(700),
+                      color: Colors.black,
                     ),
                   ),
                 ),
