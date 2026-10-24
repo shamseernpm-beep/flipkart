@@ -126,7 +126,9 @@ class _LoginState extends State<Login> {
                         } else if (username == "riswan" && password == "123") {
                           final prefs = await SharedPreferences.getInstance();
 
-                          await prefs.setBool('isLoggedIn', true);
+                          await prefs.setBool('login', true);
+                          bool isLogin = prefs.getBool('login') ?? false;
+                          print(isLogin);
 
                           if (!mounted) return;
 
