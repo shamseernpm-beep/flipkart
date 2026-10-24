@@ -128,7 +128,7 @@ class _LoginState extends State<Login> {
 
                           await prefs.setBool('login', true);
                           bool isLogin = prefs.getBool('login') ?? false;
-                          print(isLogin);
+                          print("$isLogin  its tru man");
 
                           if (!mounted) return;
 
