@@ -1,5 +1,5 @@
 import 'package:flipkart_ui/bottombar.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -97,7 +97,7 @@ class _LoginState extends State<Login> {
                     width: double.infinity,
                     color: Colors.blue,
                     child: ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
                         String username = usernameController.text;
                         String password = passwordController.text;
 
@@ -124,6 +124,12 @@ class _LoginState extends State<Login> {
                             },
                           );
                         } else if (username == "riswan" && password == "123") {
+                          final prefs = await SharedPreferences.getInstance();
+
+                          await prefs.setBool('isLoggedIn', true);
+
+                          if (!mounted) return;
+
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
