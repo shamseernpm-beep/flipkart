@@ -15,7 +15,7 @@ class Flipkart extends StatelessWidget {
   Future<bool> checkLoginStatus() async {
     final prefs = await SharedPreferences.getInstance();
 
-    return prefs.getBool('isLoggedIn') ?? false;
+    return prefs.getBool('login') ?? false;
   }
 
   @override
