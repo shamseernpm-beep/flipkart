@@ -124,10 +124,10 @@ class _LoginState extends State<Login> {
                             },
                           );
                         } else if (username == "riswan" && password == "123") {
-                          final prefs = await SharedPreferences.getInstance();
+                          final save = await SharedPreferences.getInstance();
 
-                          await prefs.setBool('login', true);
-                          bool isLogin = prefs.getBool('login') ?? false;
+                          await save.setBool('login', true);
+                          bool isLogin = save.getBool('login') ?? false;
                           print(isLogin);
 
                           if (!mounted) return;
