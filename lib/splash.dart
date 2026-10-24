@@ -1,8 +1,10 @@
 import 'dart:async';
 
-import 'login.dart';
-
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'login.dart';
+import 'bottombar.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -15,18 +17,32 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => Login()),
-      );
+
+    Timer(const Duration(seconds: 3), () async {
+      final prefs = await SharedPreferences.getInstance();
+
+      bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+
+      if (!mounted) return;
+
+      if (isLoggedIn) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => Bottombar()),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => Login()),
+        );
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFE60D),
+      backgroundColor: const Color(0xFFFFE60D),
       body: Center(
         child: SizedBox(
           height: 400,
