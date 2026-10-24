@@ -14,7 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         toolbarHeight: 80,
-        title: Center(
+        title: Center( 
           child: Text("Account", style: TextStyle(fontWeight: FontWeight(700))),
         ),
       ),
