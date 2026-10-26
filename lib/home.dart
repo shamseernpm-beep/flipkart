@@ -419,13 +419,13 @@ class _HomeState extends State<Home> {
                           Expanded(
                             child: Image.asset("assets/images/lipstick.png"),
                           ),
-                          // Text(
-                          //   "Lipstick",
-                          //   style: TextStyle(
-                          //     fontSize: 20,
-                          //     fontWeight: FontWeight(700),
-                          //   ),
-                          // ),
+                          Text(
+                            "Lipstick",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight(700),
+                            ),
+                          ),
                           Text(
                             "₹499",
                             style: TextStyle(
