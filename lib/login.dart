@@ -130,14 +130,14 @@ class _LoginState extends State<Login> {
                           bool isLogin = save.getBool('login') ?? false;
                           print(isLogin);
 
-                          // if (!mounted) return;
+                          if (!mounted) return;
 
-                          // Navigator.pushReplacement(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => Bottombar(),
-                          //   ),
-                          // );
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Bottombar(),
+                            ),
+                          );
                         } else {
                           showDialog(
                             context: context,
