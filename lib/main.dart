@@ -33,9 +33,9 @@ class Flipkart extends StatelessWidget {
             );
           }
 
-          if (snapshot.data == true) {
-            return Bottombar();
-          }
+          // if (snapshot.data == true) {
+          //   return Bottombar();
+          // }
 
           return Splash();
         },
