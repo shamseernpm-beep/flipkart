@@ -128,7 +128,7 @@ class _LoginState extends State<Login> {
 
                           await save.setBool('login', true);
                           bool isLogin = save.getBool('login') ?? false;
-                          print(isLogin);
+                          print('$isLogin  login cheythuuuuuu');
 
                           if (!mounted) return;
 

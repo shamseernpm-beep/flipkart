@@ -1,4 +1,6 @@
+import 'package:flipkart_ui/login.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -14,7 +16,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         toolbarHeight: 80,
-        title: Center( 
+        title: Center(
           child: Text("Account", style: TextStyle(fontWeight: FontWeight(700))),
         ),
       ),
@@ -107,6 +109,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                 color: const Color.fromARGB(255, 229, 229, 229),
                 child: ListTile(
+                  onTap: () async {
+                    final save = await SharedPreferences.getInstance();
+
+                    await save.setBool('login', false);
+
+                    if (!mounted) return;
+
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Login()),
+                    );
+                  },
                   leading: Icon(Icons.logout),
                   title: Text("Logout"),
                   trailing: Icon(Icons.arrow_forward_ios),
