@@ -24,22 +24,22 @@ class Flipkart extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "FLIPKART",
       theme: ThemeData(primaryColor: const Color(0xFFFFE60D)),
-      // home: FutureBuilder<bool>(
-      //   future: checkLoginStatus(),
-      //   builder: (context, snapshot) {
-      //     if (snapshot.connectionState == ConnectionState.waiting) {
-      //       return const Scaffold(
-      //         body: Center(child: CircularProgressIndicator()),
-      //       );
-      //     }
+      home: FutureBuilder<bool>(
+        future: checkLoginStatus(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            );
+          }
 
-      //     if (snapshot.data == true) {
-      //       return Bottombar();
-      //     }
+          if (snapshot.data == true) {
+            return Bottombar();
+          }
 
-      //     return Splash();
-      //   },
-      // ),
+          return Splash();
+        },
+      ),
     );
   }
 }
