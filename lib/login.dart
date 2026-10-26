@@ -128,9 +128,9 @@ class _LoginState extends State<Login> {
 
                           await save.setBool('login', true);
                           bool isLogin = save.getBool('login') ?? false;
-                          print('$isLogin  login cheythuuuuuu');
+                          print(isLogin);
 
-                          if (!mounted) return;
+                          // if (!mounted) return;
 
                           Navigator.pushReplacement(
                             context,
