@@ -1,3 +1,4 @@
+import 'package:flipkart_ui/login.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,13 +13,31 @@ void main() {
 class Flipkart extends StatelessWidget {
   const Flipkart({super.key});
 
+  Future<bool> checkLogingStatus() async {
+    final save = await SharedPreferences.getInstance();
+
+    return save.getBool('login') ?? false;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "FLIPKART",
       theme: ThemeData(primaryColor: const Color(0xFFFFE60D)),
-      home: Splash(),
+      home: FutureBuilder(
+        future: checkLogingStatus(),
+        builder: (context, Snapshot) {
+          if (Snapshot.connectionState == ConnectionState.waiting) {
+            return Scaffold(body: Center(child: CircularProgressIndicator()));
+          }
+
+          if (Snapshot.data == true) {
+            return Bottombar();
+          }
+          return Login();
+        },
+      ),
     );
   }
 }
