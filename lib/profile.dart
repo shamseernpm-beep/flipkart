@@ -114,8 +114,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                     await save.setBool('login', false);
 
-                    if (!mounted) return;
-
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => Login()),
