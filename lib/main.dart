@@ -12,11 +12,10 @@ void main() {
 
 class Flipkart extends StatelessWidget {
   const Flipkart({super.key});
-
-  Future<bool> checkLogingStatus() async {
+  Future<bool> checkStatus() async {
     final save = await SharedPreferences.getInstance();
 
-    return save.getBool('login') ?? false;
+    return await save.getBool('login') ?? false;
   }
 
   @override
@@ -26,12 +25,11 @@ class Flipkart extends StatelessWidget {
       title: "FLIPKART",
       theme: ThemeData(primaryColor: const Color(0xFFFFE60D)),
       home: FutureBuilder(
-        future: checkLogingStatus(),
+        future: checkStatus(),
         builder: (context, Snapshot) {
           if (Snapshot.connectionState == ConnectionState.waiting) {
             return Scaffold(body: Center(child: CircularProgressIndicator()));
           }
-
           if (Snapshot.data == true) {
             return Bottombar();
           }
