@@ -10,7 +10,10 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final _formKey = GlobalKey<FormState>();
+
   final TextEditingController usernameController = TextEditingController();
+
   final TextEditingController passwordController = TextEditingController();
 
   @override
@@ -28,158 +31,169 @@ class _LoginState extends State<Login> {
         child: Container(
           height: 550,
           width: 400,
-
           decoration: BoxDecoration(
-            color: Color(0xFFF8F9FA),
+            color: const Color(0xFFF8F9FA),
             borderRadius: BorderRadius.circular(15),
           ),
           child: Padding(
             padding: const EdgeInsets.all(40),
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(height: 40),
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 30,
-                      fontWeight: FontWeight(600),
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Sign in to your account",
-                    style: TextStyle(fontWeight: FontWeight(500)),
-                  ),
-                  SizedBox(height: 50),
-                  Container(
-                    color: const Color.fromARGB(255, 220, 220, 220),
-                    width: double.infinity,
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    const SizedBox(height: 40),
 
-                    child: TextField(
-                      controller: usernameController,
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.person),
-                        border: OutlineInputBorder(),
-                        labelText: "User name",
-                        hintText: "enter your user name",
+                    const Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                  ),
-                  SizedBox(height: 25),
-                  Container(
-                    width: double.infinity,
-                    color: const Color.fromARGB(255, 220, 220, 220),
-                    child: TextField(
-                      controller: passwordController,
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        hintText: "enter your password",
-                        labelText: "password",
-                        border: OutlineInputBorder(),
+
+                    const SizedBox(height: 10),
+
+                    const Text(
+                      "Sign in to your account",
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+
+                    const SizedBox(height: 50),
+
+                    SizedBox(
+                      width: double.infinity,
+                      child: TextFormField(
+                        controller: usernameController,
+                        decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.person),
+                          border: OutlineInputBorder(),
+                          labelText: "User name",
+                          hintText: "enter your user name",
+                        ),
+                        validator: (value) {
+                          if (value == null || value.trim().isEmpty) {
+                            return "Please enter username";
+                          }
+
+                          return null;
+                        },
                       ),
                     ),
-                  ),
-                  SizedBox(height: 5),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "forget password",
-                        style: TextStyle(color: Colors.blue),
+
+                    const SizedBox(height: 25),
+
+                    SizedBox(
+                      width: double.infinity,
+
+                      child: TextFormField(
+                        controller: passwordController,
+                        obscureText: true,
+                        decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.password),
+                          hintText: "enter your password",
+                          labelText: "Password",
+                          border: OutlineInputBorder(),
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter password";
+                          }
+
+                          return null;
+                        },
                       ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  Container(
-                    width: double.infinity,
-                    color: Colors.blue,
-                    child: ElevatedButton(
-                      onPressed: () async {
-                        String username = usernameController.text;
-                        String password = passwordController.text;
 
-                        if (username.isEmpty || password.isEmpty) {
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                icon: Icon(Icons.error),
-                                title: Text("please fill fields"),
-                                actions: [
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
+                    const SizedBox(height: 5),
 
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.blue,
-                                    ),
-                                    child: Text("OK"),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        } else if (username == "riswan" && password == "123") {
-                          final save = await SharedPreferences.getInstance();
-
-                          await save.setBool('login', true);
-
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Bottombar(),
-                            ),
-                          );
-                        } else {
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                icon: Icon(Icons.error),
-                                title: Text("incorrect user name or password"),
-                                content: Text(
-                                  "please check your user name and password",
-                                ),
-                                actions: [
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.blue,
-                                    ),
-                                    child: Text("OK"),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        }
-                      },
-
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                      ),
-                      child: Text(
-                        "Login",
-                        style: TextStyle(fontWeight: FontWeight(600)),
-                      ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Text("Don't have an account?"),
-                      TextButton(
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: TextButton(
                         onPressed: () {},
-                        child: Text("Register here"),
+                        child: const Text(
+                          "forget password",
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            String username = usernameController.text.trim();
+
+                            String password = passwordController.text;
+
+                            if (username == "riswan" && password == "123") {
+                              final save =
+                                  await SharedPreferences.getInstance();
+
+                              await save.setBool('login', true);
+
+                              if (!mounted) return;
+
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Bottombar(),
+                                ),
+                              );
+                            } else {
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    icon: const Icon(Icons.error),
+                                    title: const Text(
+                                      "Incorrect username or password",
+                                    ),
+                                    content: const Text(
+                                      "Please check your username and password",
+                                    ),
+                                    actions: [
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.blue,
+                                        ),
+                                        child: const Text("OK"),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            }
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                        ),
+                        child: const Text(
+                          "Login",
+                          style: TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+
+                    Row(
+                      children: [
+                        const Text("Don't have an account?"),
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text("Register here"),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
