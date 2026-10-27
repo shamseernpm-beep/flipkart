@@ -124,14 +124,6 @@ class _LoginState extends State<Login> {
                             },
                           );
                         } else if (username == "riswan" && password == "123") {
-                          final save = await SharedPreferences.getInstance();
-
-                          await save.setBool('login', true);
-                          bool isLogin = save.getBool('login') ?? false;
-                          print(isLogin);
-
-                          if (!mounted) return;
-
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
