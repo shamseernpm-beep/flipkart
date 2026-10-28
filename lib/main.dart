@@ -1,10 +1,6 @@
-import 'package:flipkart_ui/login.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'splash.dart';
-// import 'login.dart';
-import 'bottombar.dart';
 
 void main() {
   runApp(const Flipkart());
@@ -12,11 +8,6 @@ void main() {
 
 class Flipkart extends StatelessWidget {
   const Flipkart({super.key});
-  Future<bool> checkStatus() async {
-    final save = await SharedPreferences.getInstance();
-
-    return await save.getBool('login') ?? false;
-  }
 
   @override
   Widget build(BuildContext context) {

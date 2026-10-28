@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
 
         await save.setBool('login', true);
 
-        if (!mounted) return;
+        if (!mounted) ;
 
         Navigator.pushReplacement(
           context,

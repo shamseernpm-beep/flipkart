@@ -26,9 +26,9 @@ class _SplashState extends State<Splash> {
   Future<void> checkLogin() async {
     final save = await SharedPreferences.getInstance();
 
-    final isLoggined = save.getBool("isLoggined") ?? false;
+    final isLoggined = save.getBool("login") ?? false;
 
-    if (!mounted) ;
+    if (!mounted) return;
 
     if (isLoggined) {
       Navigator.pushReplacement(
