@@ -24,18 +24,7 @@ class Flipkart extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "FLIPKART",
       theme: ThemeData(primaryColor: const Color(0xFFFFE60D)),
-      home: FutureBuilder(
-        future: checkStatus(),
-        builder: (context, Snapshot) {
-          if (Snapshot.connectionState == ConnectionState.waiting) {
-            return Scaffold(body: Center(child: CircularProgressIndicator()));
-          }
-          if (Snapshot.data == true) {
-            return Bottombar();
-          }
-          return Login();
-        },
-      ),
+      home: Splash(),
     );
   }
 }

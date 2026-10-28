@@ -16,6 +16,47 @@ class _LoginState extends State<Login> {
 
   final TextEditingController passwordController = TextEditingController();
 
+  Future<void> login() async {
+    if (_formKey.currentState!.validate()) {
+      String username = usernameController.text.trim();
+
+      String password = passwordController.text;
+
+      if (username == "riswan" && password == "123") {
+        final save = await SharedPreferences.getInstance();
+
+        await save.setBool('login', true);
+
+        if (!mounted) return;
+
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => Bottombar()),
+        );
+      } else {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              icon: const Icon(Icons.error),
+              title: const Text("Incorrect username or password"),
+              content: const Text("Please check your username and password"),
+              actions: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                  child: const Text("OK"),
+                ),
+              ],
+            );
+          },
+        );
+      }
+    }
+  }
+
   @override
   void dispose() {
     usernameController.dispose();
@@ -124,54 +165,8 @@ class _LoginState extends State<Login> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () async {
-                          if (_formKey.currentState!.validate()) {
-                            String username = usernameController.text.trim();
-
-                            String password = passwordController.text;
-
-                            if (username == "riswan" && password == "123") {
-                              final save =
-                                  await SharedPreferences.getInstance();
-
-                              await save.setBool('login', true);
-
-                              if (!mounted) return;
-
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Bottombar(),
-                                ),
-                              );
-                            } else {
-                              showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    icon: const Icon(Icons.error),
-                                    title: const Text(
-                                      "Incorrect username or password",
-                                    ),
-                                    content: const Text(
-                                      "Please check your username and password",
-                                    ),
-                                    actions: [
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                        },
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor: Colors.blue,
-                                        ),
-                                        child: const Text("OK"),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
-                            }
-                          }
+                        onPressed: () {
+                          login();
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,

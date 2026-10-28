@@ -18,25 +18,27 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 3), () async {
-      final prefs = await SharedPreferences.getInstance();
+    Timer(const Duration(seconds: 3), () async {});
+  }
 
-      bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+  Future<void> checkLogin() async {
+    final save = await SharedPreferences.getInstance();
 
-      if (!mounted) return;
+    final isLoggined = save.getBool("isLoggined") ?? false;
 
-      if (isLoggedIn) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => Bottombar()),
-        );
-      } else {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => Login()),
-        );
-      }
-    });
+    if (!mounted) ;
+
+    if (isLoggined) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Bottombar()),
+      );
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Login()),
+      );
+    }
   }
 
   @override
