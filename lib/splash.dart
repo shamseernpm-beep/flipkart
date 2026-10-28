@@ -18,7 +18,9 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 3), () async {});
+    Timer(const Duration(seconds: 3), () async {
+      checkLogin();
+    });
   }
 
   Future<void> checkLogin() async {
