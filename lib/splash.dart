@@ -49,7 +49,7 @@ class _SplashState extends State<Splash> {
       backgroundColor: const Color(0xFFFFE60D),
       body: Center(
         child: SizedBox(
-          height: 400,
+          height: 500,
           width: 700,
           child: Image.asset("assets/images/flip.jpg"),
         ),
