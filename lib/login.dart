@@ -10,14 +10,14 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final _formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>();
 
   final TextEditingController usernameController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
 
   Future<void> login() async {
-    if (_formKey.currentState!.validate()) {
+    if (formKey.currentState!.validate()) {
       String username = usernameController.text.trim();
 
       String password = passwordController.text;
@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
 
         await save.setBool('login', true);
 
-        if (!mounted) ;
+        if (!mounted) return;
 
         Navigator.pushReplacement(
           context,
@@ -80,7 +80,7 @@ class _LoginState extends State<Login> {
             padding: const EdgeInsets.all(40),
             child: SingleChildScrollView(
               child: Form(
-                key: _formKey,
+                key: formKey,
                 child: Column(
                   children: [
                     const SizedBox(height: 40),
